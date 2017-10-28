@@ -35,11 +35,15 @@ percent = 0.9
 
 x = np.array([i for i in x[:int(percent*len(x))]])
 x_test = np.array([i for i in x[int((1-percent)*len(x)):]])
+
+#saving the test features
 ft = pd.DataFrame(data=x_test)
 ft.to_csv('ft.csv',sep=',',encoding='utf-8',index=False)
 
 y = np.array([i for i in y[:int(percent*len(y))]])
 y_test = np.array([i for i in y[int((1-percent)*len(y)):]])
+
+#saving the test labels
 lt = pd.DataFrame(data=y_test)
 lt.to_csv('lt.csv',sep=',',encoding='utf-8',index=False)
 
