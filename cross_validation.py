@@ -45,6 +45,9 @@ def start():
 
 	#cross validation
 	j = 0
+
+	print("\nPercent of test: %.2f%% \nAmount cases for test: %d\n" %(percent_test * 100, steps))
+
 	for i in range(n_loops):
 
 		features_cross = features
@@ -66,7 +69,7 @@ def start():
 
 		scores_total.append(test(test_features, test_labels, w1, w2))
 
-		print(scores_total[i])
+		print("%dº validation: \t%.2f%%" %((i + 1), 100 * scores_total[i]))
 
 		j = (i+1)*steps
 
