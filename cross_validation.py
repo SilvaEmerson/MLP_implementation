@@ -19,8 +19,6 @@ def start():
 		predictions = []
 		scores = 0
 
-		# global w1, w2
-
 		for i in range(len(x)):
 			l0 = x[i]
 			l1 = LeakyReLU(l0.dot(w1))
@@ -53,16 +51,14 @@ def start():
 		labels_cross = labels
 
 		test_features = features_cross[j:(i+1)*steps, :]
-		# print(len(test_features))
+
 		features_cross = np.delete(features_cross, np.s_[j:(i+1)*steps], 0)
-		# print(len(features_cross))
 
 		train_features = features_cross
 
 		test_labels = labels_cross[j:(i+1)*steps, :]
-		# print(len(test_labels))
+
 		labels_cross = np.delete(labels_cross, np.s_[j:(i+1)*steps], 0)
-		# print(len(labels_cross))
 
 		train_labels = labels_cross
 
