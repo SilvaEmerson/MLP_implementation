@@ -74,8 +74,4 @@ def start():
 
 		j = (i+1)*steps
 
-	print("%0.3f %%"%(np.mean(scores_total)*100))
-
-	# for i in range(len(cleanData)//int(percent_test)):
-	# 	x = np.array([i for i in x[:int(percent*len(x))]])
-	# 	y = np.array([i for i in y[:int(percent*len(y))]])
+	print("Total accurancy: %0.3f %%"%(np.mean(scores_total)*100))
