@@ -57,10 +57,13 @@ def train(amountRepetition = 20000):
 	char_blankspace = (" " * (10 - count_ten_percent))
 
 	for i in range(1, amountRepetition + 1):
+		#l0 -> Input layer
 		l0 = train_features
 
+		#l1 -> Hidde layer output
 		l1 = LeakyReLU(l0.dot(w1))
 
+		#l2 -> Output layer out
 		l2 = sigmoid(l1.dot(w2))
 
 		error = train_labels-l2
@@ -106,14 +109,8 @@ def train_cross_val(train_features, train_labels, amountRepetition = 1000):
 		l2 = sigmoid(l1.dot(w2))
 
 		error = train_labels-l2
-		# error = ((train_labels - l2)**2)*0.5
 
 		mean_error = np.mean(np.abs(error))
-		# print(mean_error)
-
-		# if i%100 == 0:
-		# 	# print(mean_error)
-		# 	errors.append(mean_error)
 
 		l2_error = sigmoid(l2, deriv=True) * error
 
