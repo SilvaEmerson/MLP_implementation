@@ -15,7 +15,7 @@ Artificial neural networks are computing systems inspired by the biological neur
 ### URL Dataset
 [Breast Cancer Winsconsin (Diagnostic) Data set](https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data), from UCI - Machine Learning Repository
 
-#### Used columns in the heatmap above
+#### Attribute description
 Attribute | Abbreviation
 ------------ | -------------
 Clump Thickness              | CT
